@@ -1,6 +1,6 @@
 const Navigation = () => {
   return (
-    <nav className='nav'>
+    <nav className='nav' id='nav'>
       <div className='nav__wrapper'>
         <div className='nav__logo'>
           <a className='nav__link' href='#nav'>
@@ -15,6 +15,7 @@ const Navigation = () => {
           <a className='nav__links-item' href='#offer'>
             oferta
           </a>
+          {/*eslint-disable-next-line*/}
           <a className='nav__links-item'>kontakt</a>
         </div>
 

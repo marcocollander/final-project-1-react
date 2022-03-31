@@ -16,7 +16,7 @@ const Header = () => {
         <a
           className='header__link-to-author'
           target='_blank'
-          rel='noopener'
+          rel='noreferrer'
           href='https://pixabay.com/pl/users/startupstockphotos-690514/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=593361'
         >
           StartupStockPhotos
@@ -25,7 +25,7 @@ const Header = () => {
         <a
           className='header__link-to-author'
           target='_blank'
-          rel='noopener'
+          rel='noreferrer'
           href='https://pixabay.com/pl/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=593361'
         >
           Pixabay
