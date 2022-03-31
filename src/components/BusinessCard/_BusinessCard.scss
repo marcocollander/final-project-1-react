@@ -1,0 +1,153 @@
+.about-us {
+  padding: 10px 0;
+
+  &__heading {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 2.8rem;
+    text-align: center;
+  }
+
+  &__wrapper {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  &__branch {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 10px 0;
+
+    &:nth-child(1) {
+      .about-us__image {
+        background-image: url('../../images/girl.jpg');
+      }
+    }
+
+    &:nth-child(2) {
+      .about-us__image {
+        background-image: url('../../images/hoody.jpg');
+      }
+    }
+
+    &:nth-child(3) {
+      .about-us__image {
+        background-image: url('../../images/adult.jpg');
+      }
+    }
+
+    &:nth-child(4) {
+      .about-us__image {
+        background-image: url('../../images/man.jpg');
+      }
+    }
+  }
+
+  &__image {
+    width: 50%;
+    aspect-ratio: 1/1;
+    background-size: cover;
+    background-position: top;
+    border-radius: 50%;
+    padding: 5px;
+  }
+
+  &__person {
+    &-heading {
+      margin: 30px 0;
+      font-size: 2rem;
+      text-align: center;
+    }
+  }
+
+  &__text {
+    margin-top: 20px;
+    font-size: 1.6rem;
+    text-align: justify;
+    line-height: 1.8rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .about-us__image {
+    width: 35%;
+  }
+}
+
+@media(min-width: 768px) {
+  .about-us {
+    &__heading {
+      margin-top: 60px;
+      margin-left: 20px;
+      text-align: left;
+    }
+
+    &__branch {
+      flex-direction: row;
+
+      &:nth-child(1) {
+        .about-us__person-heading {
+          text-align: left;
+        }
+      }
+
+      &:nth-child(2) {
+        .about-us__person-heading {
+          text-align: right;
+        }
+
+        .about-us__image {
+          order: 2;
+        }
+      }
+
+      &:nth-child(3) {
+        .about-us__person-heading {
+          text-align: left;
+        }
+      }
+
+      &:nth-child(4) {
+        .about-us__person-heading {
+          text-align: right;
+        }
+
+        .about-us__image {
+          order: 2;
+        }
+      }
+    }
+
+    &__person {
+      padding: 0 20px;
+    }
+  }
+}
+
+@media(min-width: 992px) {
+  .about-us {
+    &__heading {
+      @include wrapper(960px);
+      margin-top: 60px;
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    &__wrapper {
+      @include wrapper(960px);
+      padding: 0;
+    }
+
+    &__image {
+      padding: 0;
+    }
+  }
+}
+
+
+

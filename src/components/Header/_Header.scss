@@ -1,0 +1,132 @@
+.header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url('../../images/entrepreneur.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  color: #fff;
+  z-index: 1;
+
+  &__shadow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.5;
+    z-index: -1;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    padding-left: 20px;
+  }
+
+  &__heading {
+    font-size: 2.4rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-shadow: 5px 5px 5px #000;
+  }
+
+  &__text {
+    margin: 50px 0;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 2px $dark-grey;
+  }
+
+  &__btn {
+    width: 100px;
+    padding: 10px 20px;
+    border: 3px solid #fff;
+    background: none;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: $brand-color;
+    letter-spacing: 1px;
+    cursor: pointer;
+  }
+
+  &__image-author {
+    padding-left: 20px;
+    margin-top: -20px;
+    color: $text-color-light;
+  }
+
+  &__link-to-author {
+    color: $secondary-color;
+    margin: 0 5px;
+  }
+}
+
+@media (min-width: 412px) {
+  .header {
+    &__heading {
+      font-size: 3rem;
+    }
+
+    &__btn {
+      width: 150px;
+      padding: 10px 40px;
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .header {
+    &__heading {
+      font-size: 3.2rem;
+    }
+
+    &__text {
+      font-size: 2.4rem;
+    }
+
+    &__btn {
+      font-size: 2rem;
+    }
+
+    &__image-author {
+      font-size: 1.2rem;
+    }
+
+    &__link-to-author {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .header {
+    &__wrapper {
+      @include wrapper(960px);
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .header {
+    &__btn {
+      transition: 1s linear;
+
+      &:hover {
+        background-color: #fff;
+        color: #000;
+      }
+    }
+
+    &__link-to-author {
+      &:hover {
+        color: aquamarine;
+      }
+    }
+  }
+}
